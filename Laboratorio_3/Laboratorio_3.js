@@ -27,11 +27,14 @@ if (numero == numeroInv && binario == binarioInv) {
     console.log("No es Palindromo de doble base")
 }
 
+var sumatoria = 0;
+var sum = 0;
 
-function obtenerPrimo(maximo) {
+function obtenerPrimo() {
 
+    let maximo = document.getElementById("id3").value
     let auxiliar = [];
-    let primo = [];
+    let primo  = [];
 
     for (let i = 2; i <= maximo; ++i) {
         if (!auxiliar[i]) {
@@ -42,36 +45,41 @@ function obtenerPrimo(maximo) {
             }
         }
     }
-    return primo;
+
+    let suma = sumarPrimos(primo);
+
+    console.log(suma);
 }
 
-let suma = obtenerPrimo(15)
-var sumatoria = 0;
-var sum = 0;
+function sumarPrimos(suma) {
+ 
 for (var a = suma.length; a > 0; a--) {
     sum = suma[a - 1];
     sumatoria = sumatoria + sum;
 }
+return sumatoria   
+}
 
-console.log(sumatoria);
 
 
 var bisiesto;
-function valBisiesto(anio) {
-    var texto = document.getElementById("id1").value;
+function valBisiesto() {
+    var anio = document.getElementById("id1").value;
+    bisiesto = ((anio % 4 == 0 && anio % 100 != 0) || (anio % 100 == 0 && anio % 400 == 0));
+    
+    if (bisiesto){
+        console.log("Soy bisiciesto")
+    } else {
+        console.log("No soy bisiciesto")
+    }
 
-    console.log(texto)
-    return ((anio % 4 == 0 && anio % 100 != 0) || (anio % 100 == 0 && anio % 400 == 0));
 }
 
-if (valBisiesto(1903)){
-    console.log("Soy bisiciesto")
-} else {
-    console.log("No soy bisiciesto")
-}
 
 
-function contarCaracteresV2(cadena) {
+
+function contarCaracteres() {
+    let cadena = document.getElementById("id2").value
     let caracteres = [... new Set(cadena.toLowerCase())]
 
     for(var i=0; i<caracteres.length; i++){
@@ -86,5 +94,3 @@ function contarCaracteresV2(cadena) {
     }
 
 }
-
-console.log(contarCaracteresV2("AABBBACAA"));
