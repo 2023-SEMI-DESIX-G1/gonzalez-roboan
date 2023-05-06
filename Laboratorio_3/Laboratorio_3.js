@@ -1,9 +1,18 @@
 
+function valPalindromo() {
+    var numero = parseInt(document.getElementById("id1").value);
+    var binario = (numero).toString(2);
+    var binarioInv = "";
+    var numeroInv = "";
+    binarioInv = cambioposicion(binario);
+    numeroInv = cambioposicion(numero.toString());
 
-var numero = 585;
-var binario = (numero).toString(2);
-var binarioInv = "";
-var numeroInv = "";
+    if (numero == parseInt(numeroInv) && binario == binarioInv) {
+        console.log("Es Palindromo de doble base")
+    } else {
+        console.log("No es Palindromo de doble base")
+    }
+}
 
 function cambioposicion(cad) {
 
@@ -18,23 +27,44 @@ function cambioposicion(cad) {
     return result;
 }
 
-binarioInv = cambioposicion(binario);
-numeroInv = cambioposicion(numero.toString());
 
-if (numero == numeroInv && binario == binarioInv) {
-    console.log("Es Palindromo de doble base")
-} else {
-    console.log("No es Palindromo de doble base")
+function contarCaracteres() {
+    let cadena = document.getElementById("id2").value
+    let caracteres = [... new Set(cadena.toLowerCase())]
+
+    for (var i = 0; i < caracteres.length; i++) {
+        let arreglo = []
+        cadena.split('').map(n => {
+            if (n.toLowerCase() === caracteres[i]) {
+                arreglo.push(n)
+            }
+
+        })
+        console.log(`La cantidad de ${caracteres[i]} es: ${arreglo.length}`);
+    }
+
 }
 
-var sumatoria = 0;
-var sum = 0;
+
+
+function valBisiesto() {
+    var bisiesto;
+    var anio = document.getElementById("id3").value;
+    bisiesto = ((anio % 4 == 0 && anio % 100 != 0) || (anio % 100 == 0 && anio % 400 == 0));
+
+    if (bisiesto) {
+        console.log("Soy bisiciesto")
+    } else {
+        console.log("No soy bisiciesto")
+    }
+
+}
 
 function obtenerPrimo() {
 
-    let maximo = document.getElementById("id3").value
+    let maximo = document.getElementById("id4").value
     let auxiliar = [];
-    let primo  = [];
+    let primo = [];
 
     for (let i = 2; i <= maximo; ++i) {
         if (!auxiliar[i]) {
@@ -52,45 +82,13 @@ function obtenerPrimo() {
 }
 
 function sumarPrimos(suma) {
- 
-for (var a = suma.length; a > 0; a--) {
-    sum = suma[a - 1];
-    sumatoria = sumatoria + sum;
-}
-return sumatoria   
-}
-
-
-
-var bisiesto;
-function valBisiesto() {
-    var anio = document.getElementById("id1").value;
-    bisiesto = ((anio % 4 == 0 && anio % 100 != 0) || (anio % 100 == 0 && anio % 400 == 0));
-    
-    if (bisiesto){
-        console.log("Soy bisiciesto")
-    } else {
-        console.log("No soy bisiciesto")
+    var sumatoria = 0;
+    var sum = 0;
+    for (var a = suma.length; a > 0; a--) {
+        sum = suma[a - 1];
+        sumatoria = sumatoria + sum;
     }
-
+    return sumatoria
 }
 
 
-
-
-function contarCaracteres() {
-    let cadena = document.getElementById("id2").value
-    let caracteres = [... new Set(cadena.toLowerCase())]
-
-    for(var i=0; i<caracteres.length; i++){
-        let arreglo=[]
-        cadena.split('').map(n => {
-            if(n.toLowerCase() === caracteres[i]){
-                arreglo.push(n)
-            } 
-            
-        })
-        console.log(`La cantidad de ${caracteres[i]} es: ${arreglo.length}`);
-    }
-
-}
