@@ -36,10 +36,14 @@
                 fibonacciNumbersList.innerHTML = " ";
                 fibonacciNumbers.forEach((fibonacciNumber) => {
                     const listItem = document.createElement("div");
-                    listItem.textContent = fibonacciNumber;
-                    listItem.classList.add("list-group-item");
-                    fibonacciNumbersList.appendChild(listItem);
+                    const listItemSpan = document.createElement("button");
 
+                    listItemSpan.classList.add("list-button-item")
+                    listItem.classList.add("list-group-item");
+                    
+                    listItem.textContent = fibonacciNumber;
+                    listItemSpan.textContent = "X";
+                    fibonacciNumbersList.appendChild(listItem).after(listItemSpan);
                 });
 
             }

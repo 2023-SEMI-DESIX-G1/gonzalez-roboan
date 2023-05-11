@@ -10,31 +10,45 @@
 
 <body>
 
-    <table>
-        <tr>
-            <td><label for="primero">1. Ingrese número</label></td>
-            <td><input type="text" id="id1" name="palindrom"></td>
-            <td><button class="btn success" onclick="valPalindromo()">Enviar</button></td>
-        </tr>
-        <tr>
-            <td><label for="segundo">2. Ingrese cadena</label></td>
-            <td><input type="text" id="id2" name="caracteres"></td>
-            <td><button class="btn success" onclick="contarCaracteres()">Enviar</button></td>
-        </tr>
-        <tr>
-            <td><label for="tercero">3. Ingrese año</label></td>
-            <td><input type="text" id="id3" name="bisiesto"></td>
-            <td><button class="btn success" onclick="valBisiesto()">Enviar</button></td>
-        </tr>
-        <tr>
-            <td><label for="Cuarto">4. Ingrese número</label></td>
-            <td><input type="text" id="id4" name="primo"></td>
-            <td><button class="btn success" onclick="obtenerPrimo()">Enviar</button></td>
-        </tr>
+    <form id="Laboratorio">
 
-    </table>
+        <table>
+            <form id="pali">
+                <tr>
+                    <td><label for="primero">1. Ingrese número</label></td>
+                    <td><input type="text" id="id1" name="palindrom"></td>
+                    <td><button type="submit">Enviar</button></td>
+                </tr>
+            </form>
 
-    <script src="Laboratorio_3.js"></script>
+            <form id="cadena">
+                <tr>
+                    <td><label for="segundo">2. Ingrese cadena</label></td>
+                    <td><input type="text" id="id2" name="caracteres"></td>
+                    <td><button type="submit" >Enviar</button></td>
+                </tr>
+            </form>
+
+            <form id="anio">
+                <tr>
+                    <td><label for="tercero">3. Ingrese año</label></td>
+                    <td><input type="text" id="id3" name="bisiesto"></td>
+                    <td><button type="submit" >Enviar</button></td>
+                </tr>
+            </form>
+
+            <form id="primo">
+                <tr>
+                    <td><label for="Cuarto">4. Ingrese número</label></td>
+                    <td><input type="text" id="id4" name="primo"></td>
+                    <td><button type="submit" >Enviar</button></td>
+                </tr>
+            </form>
+        </table>
+
+    </form>
+
+    <script src="Lab3.js"></script>
 </body>
 
 </html>
