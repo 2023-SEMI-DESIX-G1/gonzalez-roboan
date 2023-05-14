@@ -2,8 +2,8 @@
     const app = {
         HTMLElement: {
             fibonacci: document.getElementById("fibonacci"),
-            fibonacciFromInput: document.getElementById("quantity"),
-            fibonacciNumbersList: document.getElementById("response")
+            numberFromInput: document.getElementById("numero"),
+            numberList: document.getElementById("response")
         },
         init() {
             app.HTMLElement.fibonacci.addEventListener('submit', app.handlers.fibonacciFromSubmitHandler)
@@ -11,8 +11,8 @@
         handlers: {
             fibonacciFromSubmitHandler(event) {
                 event.preventDefault();
-                const quantity = app.HTMLElement.fibonacciFromInput.value;
-                const fibonacciNumbers = app.methods.getfibonacciNumbers(quantity);
+                const numero = app.HTMLElement.numberFromInput.value;
+                const fibonacciNumbers = app.methods.getfibonacciNumbers(numero);
                 app.methods.printFibonacciNumbers(fibonacciNumbers)
             }
         },
@@ -32,18 +32,17 @@
                 return fibonacciNumbers;
             },
             printFibonacciNumbers(fibonacciNumbers) {
-                const fibonacciNumbersList = app.HTMLElement.fibonacciNumbersList;
-                fibonacciNumbersList.innerHTML = " ";
+                const numbersList = app.HTMLElement.numberList;
+                numbersList.innerHTML = "";
+                let id = 0
                 fibonacciNumbers.forEach((fibonacciNumber) => {
-                    const listItem = document.createElement("div");
-                    const listItemSpan = document.createElement("button");
-
-                    listItemSpan.classList.add("list-button-item")
+                    const listItem = document.createElement("button");
+                    listItem.id = id;
+                    listItem.setAttribute("onclick", "alert(id)");
                     listItem.classList.add("list-group-item");
-                    
                     listItem.textContent = fibonacciNumber;
-                    listItemSpan.textContent = "X";
-                    fibonacciNumbersList.appendChild(listItem).after(listItemSpan);
+                    numbersList.appendChild(listItem);
+                    id = id + 1;
                 });
 
             }
@@ -51,3 +50,11 @@
     };
     app.init();
 })();
+
+function alert(id) {
+    let result = confirm("estas seguro que quieres Eliminar");
+
+    if (result === true) {
+        document.getElementById(id).remove();
+    }
+}
