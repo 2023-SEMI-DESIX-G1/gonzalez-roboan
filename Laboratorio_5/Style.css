@@ -1,0 +1,67 @@
+body {
+    padding: 1rem;
+}
+
+.card {
+    background-color: rgb(250, 225, 225);
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.card-body label {
+    font-weight: 500;
+}
+
+.card-body input {
+    padding: 0.3rem 0.5rem;
+    border-radius: 5px;
+    border: 1px solid gray;
+    width: 12rem;
+}
+
+.card-footer {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.card-calcular {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.card-footer button {
+    background-color: brown;
+    color: white;
+    border: unset;
+    padding: 0.3rem 2rem;
+    border-radius: 5px;
+}
+
+.card-calcular button {
+    background-color: brown;
+    color: white;
+    border: unset;
+    padding: 0.3rem 1.7rem;
+    border-radius: 5px;
+}
+
+#response{
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;   
+}
+
+#response .list-group-item{
+    width: auto;
+    padding: 0.5rem;
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+    background-color: gainsboro;
+}
