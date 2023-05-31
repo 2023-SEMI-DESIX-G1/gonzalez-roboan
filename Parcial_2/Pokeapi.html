@@ -12,32 +12,36 @@
 
 <body>
     <div class="imagen">
-        <img src="pokeapi.jpg" alt="">
+        <!-- <img src="pokeapi.jpg" alt=""> -->
     </div>
-
-    <div class="contenedor">
-        <div class="texto">
-            <h1>Buscador de Pokemones</h1>
-            <h1>Busca desde Pokemon hasta las Habilidades de los mismos</h1>
-            <table>
-                <tr>
-                    <td>Buscar</td>
-                    <td>Tipo de busqueda</td>
-                </tr>
-                <tr>
-                    <td><input id="informacion" type="text"></td>
-                    <td><select class="selector" name="busqueda" id="tipo">
-                            <option></option>
-                            <option>Por Pokemon</option>
-                            <option>Por Habilidad</option>
-                        </select></td>
-                </tr>
-            </table>
+    <form id="Pokemones">
+        <div class="contenedor">
+            <div class="texto">
+                <h1>Buscador de Pokemones</h1>
+                <h1>Busca desde Pokemon hasta las Habilidades de los mismos</h1>
+                <table>
+                    <tr>
+                        <td>Buscar</td>
+                        <td>Tipo de busqueda</td>
+                    </tr>
+                    <tr>
+                        <td><input id="informacion" type="text"></td>
+                        <td><select class="selector" name="busqueda" id="tipo">
+                                <option></option>
+                                <option>Pokemon</option>
+                                <option>Habilidad</option>
+                            </select></td>
+                    </tr>
+                </table>
+            </div>
+            <div>
+                <button class="boton">Buscar</button>
+            </div>
         </div>
-        <div>
-            <button class="boton">Buscar</button>
-        </div>
-    </div>
+    </form>
 </body>
+
+<script src="utils.js"></script>
+<script src="Pokeapi.js"></script>
 
 </html>
