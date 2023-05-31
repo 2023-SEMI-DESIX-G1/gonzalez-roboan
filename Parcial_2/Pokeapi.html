@@ -12,10 +12,11 @@
 
 <body>
     <div class="imagen">
-        <!-- <img src="pokeapi.jpg" alt=""> -->
+        <img src="pokeapi.png" alt="">
     </div>
-    <form id="Pokemones">
-        <div class="contenedor">
+
+    <div class="contenedor">
+        <form id="Pokemones">
             <div class="texto">
                 <h1>Buscador de Pokemones</h1>
                 <h1>Busca desde Pokemon hasta las Habilidades de los mismos</h1>
@@ -37,8 +38,13 @@
             <div>
                 <button class="boton">Buscar</button>
             </div>
-        </div>
-    </form>
+        </form>
+        <form>
+            <button class="boton-limpiar" id="Limpiar">Limpiar</button>
+        </form>
+    </div>
+
+    <div id="results"></div>
 </body>
 
 <script src="utils.js"></script>
