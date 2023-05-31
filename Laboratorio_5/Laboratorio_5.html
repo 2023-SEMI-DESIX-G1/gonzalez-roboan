@@ -13,30 +13,36 @@
 <body>
     <main>
         <section>
-
             <div class="card">
                 <form id="Promedio">
                     <div class="card-header">
                         <h1>Promedio Estudiante</h1>
                     </div>
                     <div class="card-body">
-                        <label for="quantity">Ingrese las notas</label>
+                        <label for="quantity">Ingrese la cantidad de notas</label>
                         <input id="nota" type="number">
-                    </div>
-                    <div class="card-footer">
-                        <button type="submit">Enviar</button>
+                        <div>
+                            <button id="enviar" type="submit">Enviar</button>
+                        </div>
                     </div>
                 </form>
-                <form id="enviar">
-                    <div class="card-calcular">
-                        <button type="submit">Calcular</button>
+                <div id="response"></div>
+                <form id="CalcularForm">
+                    <div>
+                        <button type="submit" id="calcularPromedio"  type="submit" style="display: none;">Calcular</button>
                     </div>
                 </form>
             </div>
         </section>
-        <section>
-            <div id="response"></div>
-        </section>
+         <section>
+            <div id="grafica">
+
+                <canvas id="graficas" width="400" height="300"></canvas>
+
+
+            </div>
+         </section>
+
     </main>
     <script src="Laboratorio_5.js"></script>
 </body>
