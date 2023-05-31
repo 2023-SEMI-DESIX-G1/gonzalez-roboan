@@ -32,7 +32,7 @@
                     const habilidad = app.HTMLElement.informacion.value;
                     // URL de los pokemones que tiene esta habilidad
                     url = url + "ability/" + habilidad;
-                    app.methods.getPokemAbility(url).then(Data => {
+                    app.methods.getPokemonAbilityApi(url).then(Data => {
                         console.log(Data)
                         app.templates.ability(Data);
                     });
@@ -237,7 +237,7 @@
             ability(pokemones) {
 
                 const card = document.createElement("div");
-                card.classList.add("result-contenedor");
+                card.classList.add("contenedor-respuesta");
                 const h1 = document.createElement("h1");
                 h1.textContent = pokemones.name;
                 const h2 = document.createElement("h2");
