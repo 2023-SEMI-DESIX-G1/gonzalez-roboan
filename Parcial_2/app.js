@@ -152,8 +152,6 @@
                 
                 div.classList.add("row");
                 
-                //sprites
-                
                 const div_interno = document.createElement("div");
                 
                 div_interno.classList.add("column");
@@ -165,20 +163,23 @@
                 const div_sprites = document.createElement("div");
 
                 const imagen1 = document.createElement("img");
+   
                 const imagen2 = document.createElement("img");
 
                 imagen1.src = pokemon.sprites.front;
+       
                 imagen2.src = pokemon.sprites.back;
 
                 imagen1.classList.add("img");
 
                 div_sprites.appendChild(imagen1);
+          
                 div_sprites.appendChild(imagen2);
 
                 div_interno.appendChild(h6);
+           
                 div_interno.appendChild(div_sprites);
 
-                //height wight
                 const div_interno2 = document.createElement("div");
 
                 div_interno2.classList.add("column");
@@ -190,37 +191,54 @@
                 const p_medidas = document.createElement("p");
 
                 p_medidas.textContent = `${pokemon.weight} / ${pokemon.height}`;
+            
                 div_interno2.appendChild(h62);
+             
                 div_interno2.appendChild(document.createElement("br"));
+             
                 div_interno2.appendChild(p_medidas);
 
                 div.appendChild(div_interno);
+           
                 div.appendChild(div_interno2);
 
-                //segunda hilera
                 const div2 = document.createElement("div");
+             
                 div2.classList.add("row");
-                //evolution
+
                 const div_evolution = document.createElement("div");
+            
                 div_evolution.classList.add("column");
+             
                 const h6_evolution = document.createElement("h6");
+             
                 h6_evolution.textContent = "Evolution chain";
+             
                 const ul = document.createElement("ul");
+            
                 for (let i = 0; i < pokemon.evolutions.length; i++) {
                     const li = document.createElement("li");
                     li.textContent = `${pokemon.evolutions[i].name} ${pokemon.evolutions[i].is_baby ? "👶" : ""
                         }`;
                     ul.appendChild(li);
                 }
+               
                 div_evolution.appendChild(h6_evolution);
+             
                 div_evolution.appendChild(ul);
+               
                 div2.appendChild(div_evolution);
-                //abilities
+
                 const div_abilities = document.createElement("div");
+              
                 div_abilities.classList.add("column");
+               
                 const h6_abilities = document.createElement("h6");
+              
                 h6_abilities.textContent = "Abilities";
+              
                 const ul_abilities = document.createElement("ul");
+              
                 for (let i = 0; i < pokemon.abilities.length; i++) {
                     const li = document.createElement("li");
                     li.textContent = `${pokemon.abilities[i].ability.name} ${pokemon.abilities[i].is_hidden ? "🚫" : ""
@@ -228,31 +246,46 @@
                     ul_abilities.appendChild(li);
                 }
                 div_abilities.appendChild(h6_abilities);
+              
                 div_abilities.appendChild(ul_abilities);
+              
                 div2.appendChild(div_abilities);
 
                 card.appendChild(div);
+           
                 card.appendChild(div2);
+           
                 app.HTMLElement.results.appendChild(card);
             },
             ability(pokemones) {
 
                 const card = document.createElement("div");
+              
                 card.classList.add("contenedor-respuesta");
+              
                 const h1 = document.createElement("h1");
+               
                 h1.textContent = pokemones.name;
+              
                 const h2 = document.createElement("h2");
+              
                 h2.textContent = "Who can learn it?";
+              
                 card.appendChild(h1);
+               
                 card.appendChild(h2);
+               
                 const ul = document.createElement("ul");
+              
                 for (let i = 0; i < pokemones.pokemones.length; i++) {
                     const li = document.createElement("li");
                     li.textContent = `${pokemones.pokemones[i].name} ${pokemones.pokemones[i].is_hidden ? "🚫" : ""
                         }`;
                     ul.appendChild(li);
                 }
+             
                 card.appendChild(ul);
+               
                 app.HTMLElement.results.appendChild(card);
             },
         }
