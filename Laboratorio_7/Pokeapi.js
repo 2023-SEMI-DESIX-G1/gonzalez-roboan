@@ -52,10 +52,13 @@ async function getPokemonApi() {
         const name = `${pokemonData.name} (${pokemonData.id})`;
         const weight = pokemonData.weight;
         const height = pokemonData.height;
+        const Habilities = pokemonData.abilities;
         const evolutions = evolChain;
+
         console.log(`nombre y id  ${name}`);
         console.log(`peso ${weight}`);
         console.log(`Altura ${height}`);
+        console.log(Habilities)
         console.log(evolutions)
 }
 
