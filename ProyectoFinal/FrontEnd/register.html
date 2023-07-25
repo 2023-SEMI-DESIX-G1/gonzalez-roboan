@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="CSS/styles.css">
+    <title>Register</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Formulario de Registro</h1>
+        <form id="register" method="post">
+
+            <input type="text" id="nombre" name="nombre" placeholder=" nombre" required>
+            <input type="text" id="apellido" name="apellido" placeholder="apelllido" required>
+            <input type="email" id="email" name="email" placeholder="correo " required>
+            <input type="text" id="ID" name="ID" placeholder="ID Cedula o Pasaporte" required>
+            <input type="password" id="password" name="password" placeholder="contraseña" required>
+            <input type="password" id="password2" name="password2" placeholder="Confirma tu contraseña" required><br>
+            <div class="btn">
+                <button type="submit" value="Registrarse"> Registrarse</button>
+                <button type="button" onclick="location.href='login.html'">Ingresar</button>
+            </div>
+        </form>
+
+
+</body>
+
+<script src="register.js"></script>
+
+</html>
