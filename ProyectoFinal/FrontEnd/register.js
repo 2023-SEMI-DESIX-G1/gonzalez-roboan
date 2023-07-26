@@ -6,8 +6,7 @@ form.addEventListener('submit', (event) => {
     const email = document.getElementById('email').value;
     const dni = document.getElementById('ID').value;
     const password = document.getElementById('password').value;
-    console.log(nombre);
-    console.log(apellido);
+   
 
     fetch(`http://localhost:3000/register?nombre=${nombre}&apellido=${apellido}&email=${email}&dni=${dni}&password=${password}`)
         .then(response => response.json())

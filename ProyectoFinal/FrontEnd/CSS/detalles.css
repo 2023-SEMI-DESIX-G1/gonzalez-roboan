@@ -89,7 +89,7 @@ section h2 {
 .contComp {
   background-color: #ffffff;
   width: 92%;
-  height: 70%;
+  height: auto;
   margin-left: 20px;
   padding: 20px;
   display: flex;
@@ -108,6 +108,7 @@ section h2 {
   grid-template-columns: 250px 250px 250px 200px;
   grid-gap:100px;
   
+  
 }
 
 
@@ -116,10 +117,23 @@ section h2 {
   grid-column-end: 5; 
   grid-row-start: 1; 
   grid-row-end: 3;
+  
+ 
+}
+.list-group p{
+  font-family: 'Russo One', sans-serif;
+  font-size: 18px;
+
+  margin-left: 10px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  align-items: center;
 }
 
+
+
 .list-group-image{
-  border: 2px solid black;
+  border-style: inset;
   width:200px;
   height:200px;
   transition: transform 0.3s; /* Agregar una transición suave de 0.3 segundos a la propiedad transform */
@@ -170,4 +184,135 @@ h4 {
   border-style: inset;
   display: flex;
   flex-direction:row-reverse;
+}
+.contAdmin{
+  background-color: #001C30;
+  box-shadow: 0px 4px 4px rgba(255, 255, 255, 0.25);
+  width: 92%;
+  height: auto;
+  margin-left: 20px;
+  padding: 20px;
+  border-radius: 5px;
+  border-color: #D9D9D9;
+  border-style: inset;
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+}
+.containerForm{
+  width: 70%;
+  height: auto;
+  padding: 20px;
+  background-color: #D9D9D9;
+  box-shadow:  4px 4px 6px rgb(29, 29, 29);
+  border-radius: 5px;
+  border-style: inset;
+
+}
+.containerForm h3{
+  color:#A1432E;
+  margin-bottom: 10px;
+  font-family: 'Russo One', sans-serif;
+  font-size: 24px;
+  text-align: center;
+}
+
+form{
+  width: 100%;
+  height: 100%;
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+form input {
+  font-family: 'Russo One', sans-serif;
+  width: 400px;
+  height: 20px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border-color: #DAFFFB;
+  padding: 5px;
+}
+
+form input:focus {
+  outline: none;
+}
+
+form button{
+  font-family: 'Russo One', sans-serif;
+  width: 200px;
+  height: 30px;
+  background-color: #A1432E;
+  box-shadow:  4px 4px 6px rgb(29, 29, 29);
+  border: none;
+  border-radius: 5px;
+  color: #ffffff;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+form textarea{
+  font-family: 'Russo One', sans-serif;
+  width: 200px;
+  height: 100px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border-color: #DAFFFB;
+  padding: 5px;
+}
+form label{
+  color: #001C30;
+  font-family: 'Russo One', sans-serif;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+form select{
+  font-family: 'Russo One', sans-serif;
+  width: 400px;
+  height: 30px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border-color: #DAFFFB;
+  padding: 5px;
+}
+.detalle-img{
+  width: 500px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+}
+
+.custom-paragraph {
+  font-size: 24px; /* Tamaño de fuente más grande, puedes ajustar el valor según tus preferencias */
+  color: #A1432E; /* Color rojo, puedes cambiar el código de color según tus preferencias */
+  font-weight: bold;
+}
+
+.custom-paragraph-p {
+  font-size: 20px; /* Tamaño de fuente más grande, puedes ajustar el valor según tus preferencias */
+  color: #A1432E; /* Color rojo, puedes cambiar el código de color según tus preferencias */
+  font-weight: bold;
+}
+
+.btn-admin{
+  margin-left: 100px;
+  margin-top: 25px;
+  font-family: 'Russo One', sans-serif;
+  width: 100px;
+  height: 30px;
+  background-color: #A1432E;
+  box-shadow:  4px 4px 6px rgb(29, 29, 29);
+  border: none;
+  border-radius: 5px;
+  color: #ffffff;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.btn-admin:hover{
+  background-color: #64CCC5;
+  color: #001C30;
 }

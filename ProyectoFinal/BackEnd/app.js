@@ -31,7 +31,7 @@ connection.connect((err) => {
 
 
 
-//rutas de Express
+//Consulta de productos pantalla principal
 app.get('/Principal', (req, res) => {
 
   // Consulta SQL a ejecutar
@@ -59,6 +59,8 @@ app.get('/detalles', (req, res) => {
 
 });
 
+
+//Soliciud de lOGIN
 app.get('/login', (req, res) => {
   const correo = req.query.correo;
   const contasena = req.query.contasena;
@@ -71,6 +73,7 @@ app.get('/login', (req, res) => {
   });
 });
 
+//Solicitud de registro
 app.get('/register', (req, res) => {
   const nombre = req.query.nombre;
   const apellido = req.query.apellido;
@@ -106,7 +109,27 @@ app.get('/register', (req, res) => {
   });
 });
 
+app.get('/administrar', (req, res) => {
+  const producto = req.query.producto;
+  const cantidad = req.query.cantidad;
+  const precio = req.query.precio;
+  const descripcion = req.query.descripcion;
+  const imagen = req.query.imagen;
+  const categoria = req.query.categoria;
+  const marca = req.query.marca;
+  connection.query(`INSERT INTO productos (producto, cantidad, precio, descripcion, imagen, tipo, marca) VALUES ("${producto}", "${cantidad}", "${precio}", "${descripcion}", "${imagen}", "${categoria}", "${marca}")`, (err, results) => {
+    if (err) {
+      console.error('Error al insertar en la base de datos:', err);
+      res.json(1);
+    } else {
+      res.json(results);
 
+    }
+  });
+});
+
+
+//Prueba de Peticion
 app.get('/', (req, res) => {
   res.send('¡Hola, este es mi servidor Express!');
 });
@@ -116,3 +139,4 @@ const port = process.env.PORT || 3000; // Puerto del servidor
 app.listen(port, () => {
   console.log(`Servidor Express en funcionamiento en el puerto ${port}`);
 });
+
